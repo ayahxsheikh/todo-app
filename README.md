@@ -11,7 +11,15 @@
  * Bonus:
     - Show a total count of todos that have not been completed
 
-## PREVIEW
- Here is a preview of the app and its functions:
+## Mock-Up
 
- 
+The following animation demonstrates the application functionality:
+
+ ![Animation of Todo App that allows the user to create a task and once submitted a list of tasks will appear. The tasks are saved to localStorage. Has a checkbox to show task is completed and then user has option to remove task which also deletes the task item from localStorage.](images/todo_example.gif)
+
+  ## Links
+  https://ayahxsheikh.github.io/todo-app/ 
+
+
+  ---
+© 2022 ayahxsheikh. All Rights Reserved.
