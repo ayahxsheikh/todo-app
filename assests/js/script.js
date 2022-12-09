@@ -19,30 +19,26 @@ submitBtn.click(function(event){
     event.preventDefault()
     console.log('submit worked');
     // showListItems();
-    // storeItem();
 })
 
- var saveItem = todoInput.on('change',function(event){
+//TARGETS INPUT VALUE
+ var saveValue = todoInput.on('change',function(event){
     var todoValue = event.target.value;
     console.log(todoValue)
 
-    // var storedInput = localStorage.setItem(todoValue, saveItem);
-    // console.log(storedInput);
+//SAVES INPUT VALUE
+    var storedInput = localStorage.setItem(todoValue, saveValue);
+    console.log(storedInput);
+
 });
 
 
 
-// function storeItem ( ){
-//     var storeInput;
-//     showListItems();
-// };
-
+// FUNCTION TO CREATE OL OF TASK ITEMS
 // function showListItems(){
 //     userOutput
 // }
 
-
-// function counter(){
-
-// }
+//FUNCTION TO CREATE COUNTER
+// function counter(){}
 
