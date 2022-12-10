@@ -24,15 +24,16 @@ submitBtn.click(function(event){
 //TARGETS INPUT VALUE
 var saveValue = todoInput.on('change',function(event){
     var todoValue = event.target.value;
-    todoArr = todoValue;
-    // console.log(todoValue);
+    todoArr.push(todoValue);
+    // value pushed into array;
 
 //FOR LOOP TO CREATE TASK LIST
  
 
 
 //SAVES INPUT VALUE
-    var storedTodo = localStorage.setItem('task', JSON.stringify(todoArr));
+    localStorage.setItem('task', JSON.stringify(todoArr));
+    JSON.parse(localStorage.getItem('task'));
     console.log(storedTodo);
 
 });
