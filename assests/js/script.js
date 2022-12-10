@@ -24,6 +24,7 @@ submitBtn.click(function(event){
 //TARGETS INPUT VALUE
 var saveValue = todoInput.on('change',function(event){
     var todoValue = event.target.value;
+    todoArr = todoValue;
     // console.log(todoValue);
 
 //FOR LOOP TO CREATE TASK LIST
