@@ -22,13 +22,17 @@ submitBtn.click(function(event){
 })
 
 //TARGETS INPUT VALUE
- var saveValue = todoInput.on('change',function(event){
+var saveValue = todoInput.on('change',function(event){
     var todoValue = event.target.value;
-    console.log(todoValue)
+    // console.log(todoValue);
+
+//FOR LOOP TO CREATE TASK LIST
+ 
+
 
 //SAVES INPUT VALUE
-    var storedInput = localStorage.setItem(todoValue, saveValue);
-    console.log(storedInput);
+    var storedTodo = localStorage.setItem('task', JSON.stringify(todoArr));
+    console.log(storedTodo);
 
 });
 
