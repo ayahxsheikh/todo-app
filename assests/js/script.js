@@ -9,11 +9,16 @@
 //todo item needs to be stored to local storage
 
 //Global Variables:
-var todoInput = $('#todo-item');
+var todoInput = $('#todo-input');
 var submitBtn = $('#submit-item'); 
-var taskCounter = $('#total-tasks');
+var taskCounter = $('#task-no');
+var ulEl = $('#ul');
+var liEl = $('#li');
+var liSpan = $('#liTask')
+var liBtn = $('#complete');
+var todoValue;
 var todoArr = [];
-var userOutput = '';
+var taskOutput;
 
 submitBtn.click(function(event){
     event.preventDefault()
@@ -22,28 +27,22 @@ submitBtn.click(function(event){
 })
 
 //TARGETS INPUT VALUE
-var saveValue = todoInput.on('change',function(event){
-    var todoValue = event.target.value;
-    todoArr.push(todoValue);
-    // value pushed into array;
-
-//FOR LOOP TO CREATE TASK LIST
- 
-
-
-//SAVES INPUT VALUE
-    localStorage.setItem('task', JSON.stringify(todoArr));
-    JSON.parse(localStorage.getItem('task'));
-    console.log(storedTodo);
-
-});
+    todoInput.on('change',function(event){
+        todoValue = event.target.value;
+        todoArr.push(todoValue);
+        // value pushed into array;
+        
+        //SAVES INPUT VALUE
+        localStorage.setItem('task', JSON.stringify(todoArr));
+        var retrieve = JSON.parse(localStorage.getItem('task'));
+        console.log(retrieve);
+        
+    });
 
 
 
-// FUNCTION TO CREATE OL OF TASK ITEMS
-// function showListItems(){
-//     userOutput
-// }
+// FUNCTION TO CREATE TASK LIST
+// function showListItems(){}
 
 //FUNCTION TO CREATE COUNTER
 // function counter(){}
